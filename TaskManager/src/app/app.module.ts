@@ -22,6 +22,7 @@ import { TaskYetToStartComponent } from './Components/task/task-yet-to-start/tas
 import { TaskInProgressComponent } from './Components/task/task-in-progress/task-in-progress.component';
 import { TaskByTitleComponent } from './Components/task/task-by-title/task-by-title.component';
 import { TestComponentComponent } from './test-component/test-component.component';
+import { TestComponent1Component } from './test-component1/test-component1.component';
 
 
 
@@ -44,6 +45,7 @@ import { TestComponentComponent } from './test-component/test-component.componen
     TaskInProgressComponent,
     TaskByTitleComponent,
     TestComponentComponent,
+    TestComponent1Component,
 
 
    
