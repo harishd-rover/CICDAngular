@@ -1,0 +1,30 @@
+
+<h2>Details of {{task.taskName}}</h2>
+<hr />
+<div *ngIf="task" class="well well-lg">
+    <div>
+    <label><b>Task ID:</b></label>{{" "+ task.myTaskId}}
+    </div>
+    <div>
+    <label><b>Task Name:</b></label>{{" "+ task.taskName}}    
+    </div>
+    <div>
+        <label><b>Task Description:</b></label>{{" "+ task.description}}    
+    </div>
+    <div>
+        <label><b>Target Date:</b></label>{{" "+ task.targetDate|date}}    
+    </div>
+    <div>
+        <label><b>Task Status:</b></label>{{" "+ task.status}}    
+    </div>
+    <div>
+        <label><b>Priority:</b></label>{{" "+ task.priority}}    
+    </div>
+    <div>
+    <label><b>Owner Id:</b></label>{{ " "+ task.ownerId}}
+    </div>
+</div>
+
+<br>
+<br>
+<button (click)="list()" class ="btn btn-primary">Back to Task List</button>

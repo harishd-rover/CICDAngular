@@ -1,0 +1,48 @@
+<div class="panel panel-info">
+    <div class="panel-heading"> <h1>Create New Owner</h1></div>
+  </div>
+
+  
+    <form [formGroup]  = "form" (ngSubmit) = "onSubmit(form.value)">
+        <table>
+        <tr>
+            <td>
+                <b>Owner Id:</b>
+            </td>
+            <td>    
+                <input required class="form-control" type="number" name="ownerId" placeholder="Enter Id" formControlName="ownerId">
+            </td>
+        </tr>
+
+        <tr>
+            <td>    
+                <b>Owner Name:</b>
+            </td>
+            <td>    
+                <input required class="form-control" type="text" name="ownerName" placeholder="Enter Owner Name" formControlName="ownerName">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>Email:</b> 
+
+            </td>
+            <td>
+                <input required class="form-control" type="text" name="email" placeholder="Enter Email" formControlName="email">
+
+            </td>
+        </tr>
+    
+    <div class="row">
+        <div class="col-sm-6">
+            <input class="btn btn-success" type="submit" value="Submit" [disabled]="!form.valid">
+        </div>
+  
+        <div class="col-sm-6">
+          <button (click)="list()" class="btn btn-primary">Back</button>
+
+        </div>
+      </div>
+
+</table>
+    </form>

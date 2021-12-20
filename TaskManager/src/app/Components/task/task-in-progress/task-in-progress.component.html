@@ -1,0 +1,32 @@
+
+
+<div class="panel panel-info">
+    <div class="panel-heading small">
+      <h1>Tasks In Progress</h1>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Task ID </th>
+            <th>Task Name </th>
+            <th>Description </th>            
+            <th>Status </th>            
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let task of tasks | async">
+           <td>{{task.myTaskId}}</td>
+           <td>{{task.taskName}}</td>
+           <td>{{task.description}}</td>
+           <td>{{task.status}}</td>
+           <td>
+             <button (click)="deleteTask(task.myTaskId)" class="btn btn-danger">Delete</button>
+             <button [routerLink]="['/TaskDetails/', task.myTaskId]" class="btn btn-info" style="margin-left: 10px">Details</button>
+             <button [routerLink]="['/TaskUpdate/', task.myTaskId]" class="btn btn-warning" style="margin-left: 10px">Edit</button>
+           </td>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

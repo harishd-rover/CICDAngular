@@ -1,0 +1,18 @@
+
+<h2>Details of {{owner.ownerName}}</h2>
+<hr />
+<div *ngIf="owner" class="well well-lg">
+    <div>
+    <label><b>Owner ID:</b></label>{{" "+ owner.ownerId}}
+    </div>
+    <div>
+    <label><b>Owner Name:</b></label>{{" "+ owner.ownerName}}    
+    </div>
+    <div>
+    <label><b>Owner Email:</b></label>{{ " "+owner.email}}
+    </div>
+</div>
+
+<br>
+<br>
+<button (click)="list()" class ="btn btn-primary">Back to Owner List</button>

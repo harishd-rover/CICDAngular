@@ -1,0 +1,30 @@
+
+<div class="panel panel-info">
+    <div class="panel-heading small">
+      <h1>Owner List</h1>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Owner ID </th>
+            <th>Owner Name </th>
+            <th>Email </th>            
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let owner of owners | async">
+           <td>{{owner.ownerId}}</td>
+           <td>{{owner.ownerName}}</td>
+           <td>{{owner.email}}</td>
+           <td>
+            <button (click)="deleteOwner(owner.ownerId)" class="btn btn-danger">Delete</button>
+            <button [routerLink]="['/OwnerDetails/', owner.ownerId]" class="btn btn-info" style="margin-left: 10px">Details</button>
+            <button [routerLink]="['/OwnerUpdate/', owner.ownerId]" class="btn btn-warning" style="margin-left: 10px">Edit</button>
+
+        </td>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

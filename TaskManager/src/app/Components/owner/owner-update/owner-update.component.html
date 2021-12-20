@@ -1,0 +1,40 @@
+
+
+<div class="panel panel-info">
+  <div class="panel-heading small">
+    <h1>Edit Owner Details</h1>
+  </div>
+  </div>
+
+<h3>Edit Owner Details</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Owner Id</label>
+      <input type="number" class="form-control" id="oId" required [(ngModel)]="owner.ownerId" name="oId">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Owner Name</label>
+      <input type="text" class="form-control" id="oName" required [(ngModel)]="owner.ownerName" name="oName">
+    </div>
+    
+    <div class="form-group">
+        <label for="name">Contact Email</label>
+        <input type="email" class="form-control" id="email" required [(ngModel)]="owner.email" name="oPrice">
+    </div>
+
+    <div class="row">
+      <div class="col-sm-2">
+    <button type="submit" class="btn btn-success">Submit</button>
+
+      </div>
+
+      <div class="col-sm-2">
+        <button (click)="gotoList()" class="btn btn-primary">Back</button>
+
+      </div>
+    </div>
+
+  </form>
+</div>

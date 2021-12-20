@@ -1,0 +1,108 @@
+<div class="panel panel-info">
+    <div class="panel-heading"> <h1>Create New Task</h1></div>
+  </div>
+
+    <form [formGroup]  = "form" (ngSubmit) = "onSubmit(form.value)">
+        <table>
+        <tr>
+            <td>
+                <b>Task Id:</b>
+            </td>
+            <td>    
+                <input class="form-control" type="number" name="MyTaskId" placeholder="Enter Id" formControlName="MyTaskId">
+            </td>
+        </tr>
+
+        <tr>
+            <td>    
+                <b>Task Name:</b>
+            </td>
+            <td>    
+                <input required class="form-control" type="text" name="TaskName" placeholder="Enter Task Name" formControlName="TaskName">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>Task Description:</b> 
+
+            </td>
+            <td>
+                <textarea class="form-control" name="Description" id="" cols="21" rows="5" placeholder="Enter Description" formControlName="Description"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>Target Date:</b>
+                
+            </td>
+            <td>
+               
+                <input class="form-control" type="date" name="TargetDate" placeholder="TargetDate" formControlName="TargetDate">
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>Enter Status:</b>   
+            </td>
+            <td>    
+                <input class="form-control" type="text" name="Status" placeholder="Enter Status" formControlName="Status"> 
+            </td>
+        </tr>
+         <tr>
+            <td>
+                <b>Enter Priority:</b>   
+            </td>
+            <td>
+                <input class="form-control" type="text" name="Priority" placeholder="Enter Priority" formControlName="Priority"> <br> 
+            </td>
+        </tr> 
+        <tr>
+            <td>
+                <b>Enter Tags:</b>   
+            </td>
+            <td>
+                <input class="form-control" type="text" name="Tags" placeholder="Enter Tags" formControlName="Tags">   
+            </td>
+        </tr> 
+        <tr>
+            <td>
+                <b>Urgent:</b> 
+            </td>
+            <td>
+                <input class="form-control" type="checkbox" value="false" name="Urgent" formControlName="Urgent" >   
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <b>Important:</b>  
+            </td>
+            <td>
+                <input class="form-control" type="checkbox" value="false" name="Important" formControlName="Important" >   
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <b>Enter Owner Id:</b>   
+            </td>
+            <td> 
+                <input class="form-control" type="number" name="OwnerId" placeholder="Enter owner Id" formControlName="OwnerId"> 
+            </td>
+        </tr>
+
+    <div class="row">
+        <div class="col-lg-6">
+            <input class="btn btn-success" type="submit" value="Submit" [disabled]="!form.valid">
+        </div>
+  
+        <div class="col-lg-6">
+          <button (click)="list()" class="btn btn-primary">Back</button>
+
+        </div>
+      </div>
+
+
+</table>
+    </form>

@@ -1,0 +1,72 @@
+<div class="panel panel-info">
+    <div class="panel-heading small">
+      <h1>Edit Task Details</h1>
+    </div>
+</div>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Task Id</label>
+      <input type="number" class="form-control" id="tId" required [(ngModel)]="task.myTaskId" name="tId">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Task Name</label>
+      <input type="text" class="form-control" id="tName" required [(ngModel)]="task.taskName" name="tName">
+    </div>
+    
+    <div class="form-group">
+        <label for="name">Description</label>
+        <textarea class="form-control" name="tDes" id="tdes" cols="30" rows="10"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="name">Target Date</label>
+        <input type="date" class="form-control" id="tDate" required [(ngModel)]="task.targetDate" name="tDate">
+    </div>
+
+    <div class="form-group">
+        <label for="name">Status</label>
+        <input type="text" class="form-control" id="tSt" required [(ngModel)]="task.status" name="tSt">
+    </div>
+
+
+
+    <div class="form-group">    
+          <div class="checkbox">
+            <label><input value="false" type="checkbox" id="tUrg" required [(ngModel)]="task.urgent" name="tUrg"> Urgent </label>
+          </div>      
+      </div>
+      <div class="form-group">
+          <div class="checkbox">
+            <label><input value="false" type="checkbox" id="tImp" required [(ngModel)]="task.important" name="tImp"> Important </label>
+          </div>
+      </div>
+
+
+    <div class="form-group">
+        <label for="name">Priority</label>
+        <input type="text" class="form-control" id="tPri" required [(ngModel)]="task.priority" name="tPri">
+    </div>
+
+    <div class="form-group">
+        <label for="name">Owner Id</label>
+        <input type="text" class="form-control" id="tOid" required [(ngModel)]="task.ownerId" name="tOid">
+    </div>
+    
+
+
+    <div class="row">
+      <div class="col-sm-2">
+        <button type="submit" class="btn btn-success">Submit</button>
+      </div>
+
+      <div class="col-sm-2">
+        <button (click)="gotoList()" class="btn btn-primary">Back</button>
+      </div>
+    </div>
+    
+    
+    
+  </form>
+</div>
