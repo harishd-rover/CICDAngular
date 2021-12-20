@@ -24,6 +24,7 @@ import { TaskByTitleComponent } from './Components/task/task-by-title/task-by-ti
 import { TestComponentComponent } from './test-component/test-component.component';
 import { TestComponent1Component } from './test-component1/test-component1.component';
 import { TestComponent2Component } from './test-component2/test-component2.component';
+import { TestComponent3Component } from './test-component3/test-component3.component';
 
 
 
@@ -48,6 +49,7 @@ import { TestComponent2Component } from './test-component2/test-component2.compo
     TestComponentComponent,
     TestComponent1Component,
     TestComponent2Component,
+    TestComponent3Component,
 
 
    
