@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class TaskService {
-  baseUrl:string = 'https://localhost:7250/api/MyTasks';
+  baseUrl:string = 'https://webapicasestudybyharishd.azurewebsites.net/api/MyTasks';
 
 
   constructor(private http: HttpClient) { }

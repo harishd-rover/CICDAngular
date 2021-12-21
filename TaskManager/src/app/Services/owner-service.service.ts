@@ -7,7 +7,7 @@ import { Owner } from '../Models/Classes/owner';
   providedIn: 'root'
 })
 export class OwnerService {
-  baseUrl:string = 'https://localhost:7250/api/Owners';
+  baseUrl:string = 'https://webapicasestudybyharishd.azurewebsites.net/api/Owners/GetOwner';
 
 
   constructor(private http: HttpClient) { }
